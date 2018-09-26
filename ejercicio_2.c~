@@ -13,7 +13,7 @@ int mayor(int array[], int inicio, int fin);
 
 typedef struct lista_dinamica{
 	int valor;
-	lista_dinamica *siguiente;
+	lista_dinamica *siguiente
 };
 
 int main(){

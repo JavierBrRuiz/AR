@@ -1,0 +1,133 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+void insercion_men_may(int array[], int inicio, int fin);
+void insercion_may_men(int array[], int inicio, int fin);
+void burbuja_may_men(int array[], int inicio, int fin);
+void burbuja_men_may(int array[], int inicio, int fin);
+void seleccion_may_men(int array[], int inicio, int fin);
+void seleccion_men_may(int array[], int inicio, int fin);
+int menor(int array[], int inicio, int fin);
+void seleccion_may_men(int array[], int inicio, int fin);
+int mayor(int array[], int inicio, int fin);
+
+typedef struct lista_dinamica{
+	int valor;
+	lista_dinamica *siguiente
+};
+
+int main(){
+    
+}
+
+int menor (int array[], int inicio, int fin){
+	int menor = 99999;
+	int i = inicio
+
+	for (i, i < fin; i++){
+		menor = (array[i] < menor) ? array[i] : menor;
+	}
+	
+	return menor;
+}
+
+int mayor (int array[], int inicio, int fin){
+	int mayor = 0;
+	int i = inicio
+
+	for (i, i < fin; i++){
+		mayor = (array[i] > mayor) ? array[i] : mayor;
+	}
+	
+	return mayor;
+}
+
+void seleccion_men_may(int array[], int inicio, int fin){
+	int pos_menor;
+	int temp;
+
+	for (inicio; inicio < fin; ini++){
+		pos_menor = menor(array, inicio, fin);
+		temp = array[i];
+		array[i] = array[pos_menor];
+		array[pos_menor] = temp;
+	}
+	
+}
+void seleccion_may_men(int array[], int inicio, int fin){
+	int pos_mayor;
+	int temp;
+
+	for (inicio; inicio < fin; ini++){
+		pos_mayor = mayor(array, inicio, fin);
+		temp = array[i];
+		array[i] = array[pos_mayor];
+		array[pos_mayor] = temp;
+	}
+	
+}
+
+void insercion_may_men(int array[], int inicio, int fin){
+	int i = inicio +1;
+	int f = fin +1;
+	int temp, j;
+	for (i; i <= f; i++){
+		temp = array[i];
+		j = i-1;
+		while (j >= 0 && array[j] < temp){
+			array [j + 1] = array [j];
+			j--;
+		}
+		array [j+1] = temp
+	}
+void insercion_men_may(int array[], int inicio, int fin){
+	int i = inicio +1;
+	int f = fin +1;
+	int temp, j;
+	for (i; i <= f; i++){
+		temp = array[i];
+		j = i-1;
+		while (j >= 0 && array[j] > temp){
+			array [j + 1] = array [j];
+			j--;
+		}
+		array [j+1] = temp
+	}
+}
+void burbuja_men_may(int array[], int inicio, int fin){
+    int f = fin;
+    int i = inicio;
+    int temp;
+
+    for (i; i < f; i++){
+        for (f; f >= i; f--){
+            if (array[f] < array[f-1]){
+                temp = array[f-1];
+                array[f-1] = array[f];
+                array[f] = temp;
+            }
+        }
+    }
+
+    
+}
+
+void burbuja_may_men(int array[], int inicio, int fin){
+    int f = fin;
+    int i = inicio;
+    int temp;
+
+    for (i; i < f; i++){
+        for (f; f >= i; f--){
+            if (array[f] > array[f-1]){
+                temp = array[f-1];
+                array[f-1] = array[f];
+                array[f] = temp;
+            }
+        }
+    }
+
+    
+}
+
+
